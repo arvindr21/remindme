@@ -1,0 +1,39 @@
+<div class="modal" ng-controller="NewReminderCtrl">
+  <ion-header-bar class="bar bar-header bar-assertive">
+    <h1 class="title">Create Reminder</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+  <ion-content>
+    <div class="padding">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Remind Me</span>
+          <input ng-model="reminder.remindThis" type="text" placeholder="Doctor's Appointment">
+        </label>
+        <label class="item item-input item-stacked-label" ng-click="openDatePicker()">
+          <span class="input-label">At</span>
+          <input type="text" ng-model="reminder.formattedDate" placeholder="Tap to select Date & Time">
+        </label>
+
+        <ul class="list">
+
+          <li class="item item-checkbox checkbox-assertive">
+            <label class="checkbox">
+              <input type="checkbox" ng-model="reminder.shdlSMS" disabled="">
+            </label>
+            SMS me
+          </li>
+          <li class="item item-checkbox checkbox-assertive">
+            <label class="checkbox">
+              <input type="checkbox" ng-model="reminder.shdlCall">
+            </label>
+            Call me
+          </li>
+        </ul>
+
+
+        <button class="button button-full button-assertive" ng-click="createReminder()">Create</button>
+      </div>
+    </div>
+  </ion-content>
+</div>

@@ -1,0 +1,29 @@
+<ion-view>
+  <ion-content class="padding">
+    <form name="registrationForm">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Username</span>
+          <input type="email" placeholder="user@email.com" ng-model="reg.username" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="reg.password" required>
+        </label>
+        <label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Name</span>
+            <input type="text" placeholder="John Doe" ng-model="reg.name" required>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Phone</span>
+            <input type="text" placeholder="+919876543210" ng-model="reg.phone" ng-pattern="/^\+\d+$/" required>
+          </label>
+          <label>
+      </div>
+      <button class="button button-full button-assertive" ng-disabled="registrationForm.$invalid" ng-click="registerUser()">
+        Register
+      </button>
+    </form>
+  </ion-content>
+</ion-view>

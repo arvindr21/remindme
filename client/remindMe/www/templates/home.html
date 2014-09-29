@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-content has-footer="true" padding="true">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div class="list">
+
+      <div class="item" ng-repeat="reminder in reminders | orderBy:'shdlSMS':false | orderBy:'shdlCall':false | orderBy: 'isCompleted'" ng-class="{'completed' : reminder.isCompleted}"> <i class="icon ion-android-checkmark" ng-show="reminder.isCompleted"></i>
+        {{reminder.remindThis}}
+        <button class="button button-assertive button-small" ng-click="deleteReminder(reminder)">
+          <i class="icon ion-trash-a"></i>
+        </button>
+        <br/>
+        <br/>
+        <hr/>
+        <span class="showShdl"> 
+         {{(reminder.shdlSMS || reminder.shdlCall )| date:'medium'}}</span>
+      </div>
+
+      <div class="item" ng-show="reminders.length == 0">
+        No reminders yet. Create a new one!
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

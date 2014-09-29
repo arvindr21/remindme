@@ -1,0 +1,11 @@
+{
+  "name": "remindMe",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.13"
+  },
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "https://github.com/dalelotts/angular-bootstrap-datetimepicker/archive/0.2.4.tar.gz",
+    "moment": "~2.8.3"
+  }
+}
